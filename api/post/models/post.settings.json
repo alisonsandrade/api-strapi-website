@@ -26,7 +26,7 @@
       "type": "boolean",
       "default": true
     },
-    "user_id": {
+    "author": {
       "plugin": "users-permissions",
       "model": "user",
       "via": "posts"
@@ -39,6 +39,16 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "categorias": {
+      "collection": "categoria",
+      "via": "posts",
+      "dominant": true
     }
   }
 }

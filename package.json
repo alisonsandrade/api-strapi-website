@@ -12,6 +12,7 @@
   "dependencies": {
     "knex": ">=0.15.0 <0.22.0",
     "npm": "^6.14.10",
+    "slugify": "^1.4.6",
     "sqlite3": "5.0.0",
     "strapi": "3.4.6",
     "strapi-admin": "3.4.6",

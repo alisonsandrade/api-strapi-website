@@ -1263,7 +1263,8 @@
               "required": [
                 "id",
                 "title",
-                "content"
+                "content",
+                "slug"
               ],
               "properties": {
                 "id": {
@@ -1281,11 +1282,20 @@
                 "can_comment": {
                   "type": "boolean"
                 },
-                "user_id": {
+                "author": {
                   "type": "string"
                 },
                 "image": {
                   "type": "string"
+                },
+                "slug": {
+                  "type": "uid"
+                },
+                "categorias": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "published_at": {
                   "type": "string"
