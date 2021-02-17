@@ -18,7 +18,7 @@
     },
     {
       "method": "GET",
-      "path": "/posts/:id",
+      "path": "/posts/:slug",
       "handler": "post.findOne",
       "config": {
         "policies": []
