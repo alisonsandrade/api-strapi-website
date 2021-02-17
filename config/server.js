@@ -1,7 +1,7 @@
 module.exports = ({ env }) => ({
-  host: env('HOST', env.HOST),
-  port: env.int('PORT', env.PORT),
-  // url: 'https://api-alinepontes.vercel.app/',
+  host: env('HOST', '0.0.0.0'),
+  port: env.int('PORT', '1337'),
+  url: env('HEROKU_URL'),
   admin: {
     // url: '/',
     // serveAdminPanel: false,

@@ -2,13 +2,13 @@ module.exports = ({ env }) => ({
   defaultConnection: 'default',
   connections: {
     default: {
-      connector: 'bookshelf',
+      connector: 'mongoose',
       settings: {
-        client: 'sqlite',
-        filename: env('DATABASE_FILENAME', '.tmp/data.db'),
+        uri: process.env.NODE_ENV === 'production'
+          ? env('DATABASE_URI') : env('DATABASE_URI_DEV'),
       },
       options: {
-        useNullAsDefault: true,
+        ssl: true,
       },
     },
   },

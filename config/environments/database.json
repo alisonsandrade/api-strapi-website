@@ -1,0 +1,16 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "mongoose",
+      "settings": {
+        "client": "mongo",
+        "host": "${process.env.DATABASE_HOST || '127.0.0.1}",
+        "uri": "${process.env.DATABASE_URI_PROD || ''}"
+      },
+      "options": {
+        "ssl": true
+      }
+    }
+  }
+}
