@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "frases",
+  "info": {
+    "name": "Frase",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "autor": {
+      "type": "string",
+      "required": true
+    },
+    "texto": {
+      "type": "richtext",
+      "required": true,
+      "maxLength": 300,
+      "minLength": 50
+    }
+  }
+}
