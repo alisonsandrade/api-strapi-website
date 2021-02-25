@@ -25,6 +25,14 @@
       }
     },
     {
+      "method": "GET",
+      "path": "/instagram",
+      "handler": "post.getPostsInstagram",
+      "config": {
+        "policies": []
+      }
+    },    
+    {
       "method": "POST",
       "path": "/posts",
       "handler": "post.create",

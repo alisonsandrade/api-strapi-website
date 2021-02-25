@@ -1,4 +1,5 @@
 const { sanitizeEntity } = require('strapi-utils');
+const axios = require('axios')
 
 module.exports = {
   /**
@@ -13,4 +14,10 @@ module.exports = {
     const entity = await strapi.services.post.findOne({ slug });
     return sanitizeEntity(entity, { model: strapi.models.post });
   },
+
+  async getPostsInstagram(ctx) {
+    const { data } = await axios.get('https://www.instagram.com/alinepontesadvocacia/?__a=1')
+    return data
+  },
+
 };
