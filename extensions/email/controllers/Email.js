@@ -8,7 +8,7 @@ module.exports = {
   async send(ctx) {
     await strapi.plugins['email'].services.email.send({
       to: 'contato@alinepontes.adv.br',
-      from: `${ctx.request.body.name} <${ctx.request.body.from}>`,
+      from: ctx.request.body.from,
       replyTo: 'no-replay@alinepontes.adv.br',
       subject: ctx.request.body.subject,
       text: ctx.request.body.text,
