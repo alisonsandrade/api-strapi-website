@@ -1,4 +1,5 @@
 module.exports = ({ env }) => ({
+  
   upload: {
     provider: 'aws-s3',
     providerOptions: {
@@ -8,17 +9,6 @@ module.exports = ({ env }) => ({
       params: {
         Bucket: 'upload-strapi-alinepontes',
       },
-    },
-  },
-
-  email: {
-    provider: 'sendgrid',
-    providerOptions: {
-      apiKey: env('SENDGRID_API_KEY'),
-    },
-    settings: {
-      defaultFrom: 'contato@alinepontes.adv.br',
-      defaultReplyTo: 'no-reply@alinepontes.adv.br',
     },
   },
 
