@@ -16,8 +16,12 @@ module.exports = {
   },
 
   async getPostsInstagram(ctx) {
-    const { data } = await axios.get('https://www.instagram.com/alinepontesadvocacia/?__a=1')
-    return data
+    try {
+      const { data } = await axios.get(process.env.INSTAGRAM_API_URL)
+      return data      
+    } catch (error) {
+      return error.response
+    }    
   },
 
 };
